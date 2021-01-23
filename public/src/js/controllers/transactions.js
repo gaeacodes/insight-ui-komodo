@@ -40,6 +40,13 @@ angular
             notAddr = true;
           }
 
+          // deal with reward duration
+          if (items[i].scriptSig && items[i].timeRewardAccrued) {
+            items[i].timeRewardAccrued = moment
+              .duration(items[i].timeRewardAccrued, "seconds")
+              .humanize();
+          }
+
           // non standard output
           if (items[i].scriptPubKey && !items[i].scriptPubKey.addresses) {
             items[i].scriptPubKey.addresses = [
@@ -69,6 +76,7 @@ angular
             tmp[addr].count = 0;
             tmp[addr].addr = addr;
             tmp[addr].items = [];
+            tmp[addr].totalAvailableRewards = 0;
           }
           tmp[addr].isSpent = items[i].spentTxId;
 
@@ -80,7 +88,8 @@ angular
           tmp[addr].valueSat += Math.round(items[i].value * COIN);
           tmp[addr].items.push(items[i]);
           tmp[addr].notAddr = notAddr;
-
+          tmp[addr].totalAvailableRewards =
+            tmp[addr].totalAvailableRewards + items[i].rewardsAvailable * 1e-8;
           if (items[i].unconfirmedInput) tmp[addr].unconfirmedInput = true;
 
           tmp[addr].count++;
