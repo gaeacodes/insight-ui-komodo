@@ -47,6 +47,9 @@
     "front-end"
   ],
   "bitcoreNode": "bitcore-node-komodo",
+  "scripts": {
+    "build": "grunt compile"
+  },
   "dependencies": {},
   "devDependencies": {
     "bower": "~1.8.8",
