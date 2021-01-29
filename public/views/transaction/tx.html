@@ -294,7 +294,7 @@
                 <p class="btn-copy" clip-copy="item"></p>
               </div><br>
               <p><strong>Rewards Claimed:</strong><span class="text-muted">  {{vin.rewardClaimed}} KMD</span></p>
-              <p><strong>Time Rewards Accrued:</strong><span class="text-muted"> {{vin.timeRewardAccrued}}</span></p>
+              <p><strong>Time Rewards Accrued:</strong><span class="text-muted"> {{vin.timeRewardAccrued?vin.timeRewardAccrued:0}}</span></p>
 
           </div>
         </div>
