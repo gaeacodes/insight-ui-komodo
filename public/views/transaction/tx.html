@@ -293,7 +293,7 @@
                 <p class="col-md-11 ellipsis text-muted">{{item}}</p>
                 <p class="btn-copy" clip-copy="item"></p>
               </div><br>
-              <p><strong>Rewards Claimed:</strong><span class="text-muted">  {{vin.rewardClaimed}} KMD</span></p>
+              <p><strong>Rewards Claimed:</strong><span class="text-muted">  {{(vin.rewardClaimed).toFixed(8)}} KMD</span></p>
               <p><strong>Time Rewards Accrued:</strong><span class="text-muted"> {{vin.timeRewardAccrued?vin.timeRewardAccrued:0}}</span></p>
 
           </div>
@@ -377,7 +377,7 @@
           <div style="padding-left: 0.7em; padding-bottom: 2em; word-wrap:break-word" data-ng-class="{true: 'v_highlight', false: ''}[from_vout == true && v_index == vout.n]">
                           <p class="small">
                             <strong translate>Rewards Available</strong>
-                            <span class="text-muted">{{vout.rewardsAvailable * 1e-8}} KMD</span>
+                            <span class="text-muted">{{(vout.rewardsAvailable * 1e-8).toFixed(8)}} KMD</span>
                           </p>
               <p class="small">
                 <strong translate>Type</strong>
@@ -415,7 +415,7 @@
       class="txvalues txvalues-default"><span translate>Fee</span>: {{$root.currency.getConvertion(tx.fees)}} </span>
   <span data-ng-show="!tx.isCoinBase &&  !isNaN(parseFloat(tx.rewardClaimed))" class="txvalues txvalues
       txvalues-success"><span
-      translate>Reward:</span> {{tx.rewardClaimed}} KMD </span></div>
+      translate>Reward:</span> {{(tx.rewardClaimed).toFixed(8)}} KMD </span></div>
   <div class="col-xs-6 col-sm-8 col-md-6 text-right">
     <span data-ng-show="tx.confirmations" class="txvalues
       txvalues-success">{{tx.confirmations}} <span translate>Confirmations</span></span>
