@@ -346,7 +346,7 @@
                 <span data-ng-show="vout.notAddr">{{vout.addr}}</span>
                 <span class="text-muted" title="Current Komodo Address" data-ng-show="address == $root.currentAddr" data-ng-repeat="address in vout.addr.split(',')">{{vout.addr}}</span>
                 <a href="address/{{address}}"  data-ng-show="!vout.notAddr && address != $root.currentAddr" data-ng-repeat="address in vout.addr.split(',')">{{address}}</a><br/>
-                <span class="text-muted" data-ng-show="vout.totalAvailableRewards">Rewards Available: {{vout.totalAvailableRewards}} KMD</span>
+                <span class="text-muted" data-ng-show="vout.totalAvailableRewards">Estimated Rewards Available: {{(vout.totalAvailableRewards).toFixed(4)}} KMD</span>
               </div>
             </div>
           </div>
