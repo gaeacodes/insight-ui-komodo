@@ -415,7 +415,7 @@
       class="txvalues txvalues-default"><span translate>Fee</span>: {{$root.currency.getConvertion(tx.fees)}} </span>
   <span data-ng-show="!tx.isCoinBase &&  !isNaN(parseFloat(tx.rewardClaimed))" class="txvalues txvalues
       txvalues-success"><span
-      translate>Reward:</span> {{(tx.rewardClaimed).toFixed(8)}} KMD </span></div>
+      translate>Reward:</span> {{(tx.rewardClaimed).toFixed(4)}} KMD </span></div>
   <div class="col-xs-6 col-sm-8 col-md-6 text-right">
     <span data-ng-show="tx.confirmations" class="txvalues
       txvalues-success">{{tx.confirmations}} <span translate>Confirmations</span></span>
