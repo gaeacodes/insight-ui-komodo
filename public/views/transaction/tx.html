@@ -412,7 +412,7 @@
 <div class="line-top row" data-ng-hide="!tx">
   <div class="col-xs-6 col-sm-4 col-md-6">
     <span data-ng-show="!tx.isCoinBase &&  !isNaN(parseFloat(tx.fees))"
-      class="txvalues txvalues-default"><span translate>Fee</span>: {{($root.currency.getConvertion(tx.fees)).toFixed(4)}} </span>
+      class="txvalues txvalues-default"><span translate>Fee</span>: {{$root.currency.getConvertion(tx.fees)}} </span>
   <span data-ng-show="!tx.isCoinBase &&  !isNaN(parseFloat(tx.rewardClaimed))" class="txvalues txvalues
       txvalues-success"><span
       translate>Reward:</span> {{(tx.rewardClaimed).toFixed(4)}} KMD </span></div>
