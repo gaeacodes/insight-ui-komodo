@@ -74,7 +74,7 @@ For more details about the [Insight API](https://github.com/supernetorg/insight-
 
 ## Contribute
 
-Contributions and suggestions are welcomed at the [Insight UI GitHub repository](https://github.com/supernetorg/insight-ui-komodo).
+Contributions and suggestions are welcomed at the [Insight UI GitHub repository](https://github.com/supernetorg/insight-ui-komodo)
 
 
 ## License
