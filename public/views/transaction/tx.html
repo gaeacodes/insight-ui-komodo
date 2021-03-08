@@ -423,8 +423,8 @@
         <span data-ng-show="!tx.isCoinBase &&  !isNaN(parseFloat(tx.fees))"
           class="txvalues txvalues-default"><span translate>Fee</span>: {{$root.currency.getConvertion(tx.userFee)}} </span>
           <a href="https://support.komodoplatform.com/support/solutions/articles/29000024428-komodo-5-active-user-reward-all-you-need-to-know"><span data-ng-show="!tx.isCoinBase &&  !isNaN(parseFloat(tx.rewardClaimed))" class="txvalues 
-          txvalues-warning"><span
-          translate>Potential Reward Lost:</span> {{(tx.rewardClaimed).toFixed(8)}} KMD &nbsp; <span class="glyphicon glyphicon-share"></span> </span></a></div>      
+          txvalues-warning" style="color: #333"><span
+          translate> Reward Lost:</span> {{(tx.rewardClaimed).toFixed(8)}} KMD &nbsp; <span class="glyphicon glyphicon-share"></span> </span></a></div>      
   <div class="col-xs-6 col-sm-8 col-md-6 text-right">
     <span data-ng-show="tx.confirmations" class="txvalues
       txvalues-success">{{tx.confirmations}} <span translate>Confirmations</span></span>
