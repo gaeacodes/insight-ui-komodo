@@ -384,6 +384,10 @@ margin-left: 0;
   background-color: #2FA4D7;
 }
 
+.txvalues-warning {
+  background-color: yellow;
+}
+
 .txvalues-danger {
   background-color: #AC0015;
 }
