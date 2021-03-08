@@ -385,7 +385,7 @@ margin-left: 0;
 }
 
 .txvalues-warning {
-  background-color: yellow;
+  background-color: #e9c85e;
 }
 
 .txvalues-danger {
@@ -847,7 +847,7 @@ a.v_highlight_more {
   }
   .txvalues-warning {
     background: none;
-    color:yellow;
+    color:#e9c85e;
   }
   .txvalues-danger {
     background: none;
