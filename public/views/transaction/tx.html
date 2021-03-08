@@ -250,6 +250,12 @@
             </div>
           </div>
         </div>
+        <div class="panel panel-default">
+          <div class="panel-body transaction-vin-vout">
+          <span data-ng-show="!tx.isCoinBase &&  !isNaN(parseFloat(tx.rewardClaimed))">KMD Rewards </span>
+          <span class="pull-right btc-value" title=" Komodo Rewards" data-ng-show="!tx.isCoinBase &&  !isNaN(parseFloat(tx.rewardClaimed))">{{(tx.rewardClaimed)}} KMD</span>
+        </div>
+      </div>
         <div class="showmore_collapse text-left" data-ng-show="tx.vinSimple.length > 5" data-ng-class="{ 'hidden': itemsExpanded}">
           <button type="button" class="btn btn-info btn-sm" ng-hide="sizeInNoExpanded != tx.vinSimple.length" ng-click="currentInNoExpanded=0; sizeInNoExpanded=5"><i class="glyphicon glyphicon-chevron-up"></i> 
             <span translate>Show less</span></button>

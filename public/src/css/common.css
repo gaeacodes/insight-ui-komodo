@@ -841,6 +841,10 @@ a.v_highlight_more {
     background: none;
     color: #A09E9E;
   }
+  .txvalues-warning {
+    background: none;
+    color:yellow;
+  }
   .txvalues-danger {
     background: none;
     color: #AC0015;

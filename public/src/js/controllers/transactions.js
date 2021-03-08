@@ -88,10 +88,9 @@ angular
           tmp[addr].valueSat += Math.round(items[i].value * COIN);
           tmp[addr].items.push(items[i]);
           tmp[addr].notAddr = notAddr;
-          tmp[addr].totalAvailableRewards = (
+          tmp[addr].totalAvailableRewards =
             tmp[addr].totalAvailableRewards +
-            items[i].rewardsAvailable * 1e-8
-          ).toFixed(8);
+            (items[i].rewardsAvailable * 1e-8).toFixed(8);
           if (items[i].unconfirmedInput) tmp[addr].unconfirmedInput = true;
 
           tmp[addr].count++;
